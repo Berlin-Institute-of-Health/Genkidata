@@ -11,7 +11,7 @@ Composition numbers will be randomized in a way so the sum is the amount that wa
 ## Use
 1. Download dependencies 
 `pip install -r requirements.txt`
-2. Upload your own opts and compositions into the folders or use the sample ones. XML compositions are not supported. 
+2. Save your own opts and compositions into the folders or use the sample ones. XML compositions are not supported. 
 3. Run Genkidata 
 `python3 genkidata.py`
 
