@@ -7,18 +7,18 @@ import random
 import os
 from getpass import getpass
 
-# base_url = "http://localhost:8080/ehrbase/rest/openehr/v1"
-# username = "myuser"
-# password = "myPassword432"
+base_url = "http://localhost:8080/ehrbase/rest/openehr/v1"
+username = "myuser"
+password = "myPassword432"
 
 header = {'Content-type': 'application/json;', 'Accept': 'application/json;', 'charset': 'utf-8;',
           'Prefer': 'return=representation'}
-headerOpts = {'Content-type': 'application/xml;', 'Accept': 'application/json;', 'charset': 'utf-8;',
+headerOpts = {'Content-type': 'application/xml;', 'charset': 'utf-8;',
               'Prefer': 'return=representation'}
 ehr_ids = []
-global base_url
-global username
-global password
+#global base_url
+#global username
+#global password
 
 
 class Composition:
@@ -62,13 +62,14 @@ def check_connection():
 
 
 def enter_login():
-    global base_url
-    base_url = input(
-        "Hey lad, please enter the URL of your openEHR API e.g. http://localhost:8080/ehrbase/rest/openehr/v1: ")
-    global username
-    username = input("Enter you username: ")
-    global password
-    password = getpass()
+    # global base_url
+    # base_url = input(
+    #     "Hey lad, please enter the URL of your openEHR API e.g. http://localhost:8080/ehrbase/rest/openehr/v1: ")
+    # global username
+    # username = input("Enter you username: ")
+    # global password
+    # password = getpass()
+    pass
 
 def create_ehrs(auth, ehr_count):
     loop = asyncio.get_event_loop()
@@ -148,7 +149,7 @@ def load_compositions(composition_count):
 def send_opts(filename, basic_auth_requests):
     response = requests.post(base_url + "/definition/template/adl1.4", data=open(filename).read().encode('utf8'),
                              headers=headerOpts, auth=basic_auth_requests)
-    print("Upload: " + str(response.json()))
+    print("Upload "+filename+": " + str(response.status_code))
 
 
 def load_opts(basic_auth_requests):
