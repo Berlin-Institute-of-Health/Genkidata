@@ -15,3 +15,6 @@ Composition numbers will be randomized in a way so the sum is the amount that wa
 3. Run Genkidata 
 `python3 genkidata.py`
 
+If running in an IDE the getpass won't work, use static variable then as contained in the code.
+
+
