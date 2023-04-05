@@ -7,15 +7,17 @@ import random
 import os
 from getpass import getpass
 
-#base_url = "http://localhost:8080/ehrbase/rest/openehr/v1"
-#username = "myuser"
-#password = "myPassword432"
+# base_url = "http://localhost:8080/ehrbase/rest/openehr/v1"
+# username = "myuser"
+# password = "myPassword432"
 
 header = {'Content-type': 'application/json;', 'Accept': 'application/json;', 'charset': 'utf-8;',
           'Prefer': 'return=representation'}
 headerOpts = {'Content-type': 'application/xml;', 'charset': 'utf-8;',
               'Prefer': 'return=representation'}
 ehr_ids = []
+successfull_compositions = {}
+counter_successful = 0
 global base_url
 global username
 global password
@@ -48,6 +50,7 @@ async def do_ehr_posts(session, execution_counter):
         print("-> Created EHRs %d" % execution_counter)
         json_object = json.loads(data)
         ehr_ids.append(json_object["ehr_id"]["value"])
+        print(ehr_ids)
 
 
 def check_connection():
@@ -70,6 +73,7 @@ def enter_login():
     global password
     password = getpass()
     pass
+
 
 def create_ehrs(auth, ehr_count):
     loop = asyncio.get_event_loop()
@@ -104,6 +108,9 @@ async def do_composition_posts(session, composition, execution_counter):
         data = await response.text()
         if (response.ok):
             print("-> Created composition " + composition.filename + " number %d" % execution_counter)
+            successfull_compositions[composition.filename] += 1
+            global counter_successful
+            counter_successful = counter_successful + 1
         else:
             print("ERROR: ", response.status)
             print("Filename: ", composition.filename)
@@ -142,14 +149,16 @@ def load_compositions(composition_count):
     for root, dirs, files in os.walk("compositions", topdown=False):
         for filename in files:
             with open(os.path.join(root, filename)) as file:
+                print(filename)
                 compositions.append(Composition(int(amounts.pop(0)), json.load(file), random.choice(ehr_ids), filename))
+                successfull_compositions[filename] = 0
     return compositions
 
 
 def send_opts(filename, basic_auth_requests):
     response = requests.post(base_url + "/definition/template/adl1.4", data=open(filename).read().encode('utf8'),
                              headers=headerOpts, auth=basic_auth_requests)
-    print("Upload "+filename+": " + str(response.status_code))
+    print("Upload " + filename + ": " + str(response.status_code))
 
 
 def load_opts(basic_auth_requests):
@@ -175,7 +184,11 @@ def main():
     create_ehrs(auth, ehr_count)
     print("---------Creating Compositions-------------")
     create_compositions(auth, composition_count)
+    print("Successfully created: " + str(successfull_compositions))
+    print("Sum of successfully created: " + str(counter_successful))
 
 
 if __name__ == "__main__":
     main()
+
+# ['93019b6a-d493-429a-b7fd-d4b7b0bc4535']
