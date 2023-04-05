@@ -7,9 +7,9 @@ import random
 import os
 from getpass import getpass
 
-# base_url = "http://localhost:8080/ehrbase/rest/openehr/v1"
-# username = "myuser"
-# password = "myPassword432"
+base_url = "http://localhost:8080/ehrbase/rest/openehr/v1"
+username = "myuser"
+password = "myPassword432"
 
 header = {'Content-type': 'application/json;', 'Accept': 'application/json;', 'charset': 'utf-8;',
           'Prefer': 'return=representation'}
@@ -18,10 +18,10 @@ headerOpts = {'Content-type': 'application/xml;', 'charset': 'utf-8;',
 ehr_ids = []
 successfull_compositions = {}
 counter_successful = 0
-global base_url
-global username
-global password
-
+# global base_url
+# global username
+# global password
+#
 
 class Composition:
     def __init__(self, amount, composition_json, ehr_id, filename):
@@ -149,7 +149,6 @@ def load_compositions(composition_count):
     for root, dirs, files in os.walk("compositions", topdown=False):
         for filename in files:
             with open(os.path.join(root, filename)) as file:
-                print(filename)
                 compositions.append(Composition(int(amounts.pop(0)), json.load(file), random.choice(ehr_ids), filename))
                 successfull_compositions[filename] = 0
     return compositions
@@ -169,11 +168,11 @@ def load_opts(basic_auth_requests):
 
 
 def main():
-    enter_login()
-    status_code = check_connection()
-    while not status_code:
-        enter_login()
-        status_code = check_connection()
+    # enter_login()
+    # status_code = check_connection()
+    # while not status_code:
+    #     enter_login()
+    #     status_code = check_connection()
     basic_auth_requests = HTTPBasicAuth(username, password)
     auth = aiohttp.BasicAuth(login=username, password=password, encoding='utf-8')
     load_opts(basic_auth_requests)
