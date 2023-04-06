@@ -120,6 +120,15 @@
       "_type" : "DV_TEXT",
       "value" : "Größe/Länge"
     },
+        "archetype_details" : {
+          "archetype_id" : {
+            "value" : "openEHR-EHR-OBSERVATION.height.v2"
+          },
+                "template_id" : {
+                  "value" : "Körpergröße"
+                },
+                "rm_version" : "1.0.4"
+              },
     "language" : {
       "_type" : "CODE_PHRASE",
       "terminology_id" : {

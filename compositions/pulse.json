@@ -2,7 +2,7 @@
   "_type" : "COMPOSITION",
   "name" : {
     "_type" : "DV_TEXT",
-    "value" : "Registereintrag"
+    "value" : "Herzfrequenz"
   },
   "archetype_details" : {
     "archetype_id" : {
@@ -120,6 +120,15 @@
       "_type" : "DV_TEXT",
       "value" : "Pulsfrequenz/Herzfrequenz"
     },
+    "archetype_details" : {
+          "archetype_id" : {
+            "value" : "openEHR-EHR-OBSERVATION.pulse.v2"
+          },
+                "template_id" : {
+                  "value" : "Herzfrequenz"
+                },
+                "rm_version" : "1.0.4"
+              },
     "language" : {
       "_type" : "CODE_PHRASE",
       "terminology_id" : {

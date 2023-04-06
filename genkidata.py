@@ -1,3 +1,5 @@
+import time
+
 import requests
 import asyncio
 import aiohttp
@@ -16,8 +18,13 @@ header = {'Content-type': 'application/json;', 'Accept': 'application/json;', 'c
 headerOpts = {'Content-type': 'application/xml;', 'charset': 'utf-8;',
               'Prefer': 'return=representation'}
 ehr_ids = []
-successfull_compositions = {}
-counter_successful = 0
+successful_composition_list = {}
+successful_uploads_counter = 0
+upload_counter = 0
+sleep_limit = 3000
+#[['2dbc18b8-4316-4966-9717-32f2b2648592']
+
+
 # global base_url
 # global username
 # global password
@@ -102,15 +109,23 @@ async def send_composition(session, composition):
 
 
 async def do_composition_posts(session, composition, execution_counter):
+    global upload_counter
+    global sleep_limit
+    global successful_uploads_counter
+
     data = json.dumps(composition.composition_json)
     async with session.post(base_url + "/ehr/" + composition.ehr_id + "/composition", data=data.encode("utf-8"),
                             headers=header) as response:
         data = await response.text()
-        if (response.ok):
+        upload_counter += 1
+        print( "Compositions upload nr: " + str(upload_counter))
+        if upload_counter == sleep_limit:
+            sleep_limit += sleep_limit
+            time.sleep(10)
+        if response.ok:
             print("-> Created composition " + composition.filename + " number %d" % execution_counter)
-            successfull_compositions[composition.filename] += 1
-            global counter_successful
-            counter_successful = counter_successful + 1
+            successful_composition_list[composition.filename] += 1
+            successful_uploads_counter = successful_uploads_counter + 1
         else:
             print("ERROR: ", response.status)
             print("Filename: ", composition.filename)
@@ -150,7 +165,7 @@ def load_compositions(composition_count):
         for filename in files:
             with open(os.path.join(root, filename)) as file:
                 compositions.append(Composition(int(amounts.pop(0)), json.load(file), random.choice(ehr_ids), filename))
-                successfull_compositions[filename] = 0
+                successful_composition_list[filename] = 0
     return compositions
 
 
@@ -183,8 +198,8 @@ def main():
     create_ehrs(auth, ehr_count)
     print("---------Creating Compositions-------------")
     create_compositions(auth, composition_count)
-    print("Successfully created: " + str(successfull_compositions))
-    print("Sum of successfully created: " + str(counter_successful))
+    print("Successfully created: " + str(successful_composition_list))
+    print("Sum of successfully created: " + str(successful_uploads_counter))
 
 
 if __name__ == "__main__":

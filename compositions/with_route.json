@@ -90,6 +90,15 @@
     "name": {
       "value": "Verordnung von Arzneimittel"
     },
+    "archetype_details" : {
+          "archetype_id" : {
+            "value" : "openEHR-EHR-INSTRUCTION.medication_order.v2"
+          },
+                "template_id" : {
+                  "value" : "Nephro_Medikation"
+                },
+                "rm_version" : "1.0.4"
+              },
     "language": {
       "terminology_id": {
         "value": "ISO_639-1"
@@ -140,6 +149,15 @@
       "name": {
         "value": "Verordnung"
       },
+      "archetype_details" : {
+          "archetype_id" : {
+            "value" : "openEHR-EHR-ACTION.sample_action.v1"
+          },
+                "template_id" : {
+                  "value" : "Nephro_Medikation"
+                },
+                "rm_version" : "1.0.4"
+              },
       "description": {
         "name": {
           "value": "Tree"

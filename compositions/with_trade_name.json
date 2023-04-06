@@ -90,17 +90,28 @@
     "name": {
       "value": "Verordnung von Arzneimittel"
     },
+    "archetype_details" : {
+          "archetype_id" : {
+            "value" : "openEHR-EHR-INSTRUCTION.medication_order.v2"
+          },
+                "template_id" : {
+                  "value" : "Nephro_Medikation"
+                },
+                "rm_version" : "1.0.4"
+              },
     "language": {
       "terminology_id": {
         "value": "ISO_639-1"
       },
       "code_string": "de"
     },
-    "encoding": {
-      "terminology_id": {
-        "value": "Unicode"
+    "encoding" : {
+      "_type" : "CODE_PHRASE",
+      "terminology_id" : {
+        "_type" : "TERMINOLOGY_ID",
+        "value" : "IANA_character-sets"
       },
-      "code_string": "UTF-8"
+      "code_string" : "UTF-8"
     },
     "subject": {
       "_type": "PARTY_SELF"
@@ -139,6 +150,15 @@
       "name": {
         "value": "Verordnung"
       },
+      "archetype_details" : {
+          "archetype_id" : {
+            "value" : "openEHR-EHR-ACTION.sample_action.v1"
+          },
+                "template_id" : {
+                  "value" : "Nephro_Medikation"
+                },
+                "rm_version" : "1.0.4"
+              },
       "description": {
         "name": {
           "value": "Tree"
@@ -280,7 +300,7 @@
                       "_type": "DV_TEXT"
                     },
                     "value": {
-                      "value": "EdgpEVtvmVJaCzZxSYxEEbfWjUGlgRQLHZITDJEqGn,,GFhokLIrTCkSOjFBpXQaKE.TJMDgJCeGa.VTdeIlJCRsbrdBZidjNrVAhYmsa,jsqNXQ,Sfkh,vOYRcSyOlIBPCqjOqVbgBgblJDtyOmEQfzROlynAMTwYQioshcFIfCmJAKFWoFFiJbOCWcGWtX.F.MBqvWGjsKUrfDAPB,eryRZrdkrikIR QH iQwwvYouUXIhlJECKcYtUzJKbe",
+                      "value": "Stück",
                       "_type": "DV_TEXT"
                     },
                     "archetype_node_id": "at0145",
@@ -327,7 +347,7 @@
                             "_type": "DV_TEXT"
                           },
                           "value": {
-                            "value": "SUDTgORTIfKGYtedRavhWiwZZDHUzwxFDEOjbTwmCOwjBoAXdAqE,orXctGXgFHgReGOSDeZHjkQvUiJaMaJs,cIzWRtuqDu.rqkQcymLNtaULZKCAfEdgoUQYfvm  FyeoxMm,XIqNzRrzfOkozAMgZjAybz,iSSpIDsryLBgQLYVQtJS qWCTnBzaa,kWWqXDuwMlvuXDxcvVm.dNafEimHdgIUuojLfvQtOnTsBkkgg.A.JOPvGPETKnQjlk",
+                            "value": "morgens",
                             "_type": "DV_TEXT"
                           },
                           "archetype_node_id": "at0026",

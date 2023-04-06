@@ -173,6 +173,7 @@
             },
             "value": {
               "magnitude": "1",
+              "units": "1",
               "_type": "DV_QUANTITY"
             },
             "archetype_node_id": "at0144",
