@@ -183,7 +183,7 @@
               "_type" : "DV_ORDINAL",
               "symbol" : {
                 "_type" : "DV_CODED_TEXT",
-                "value" : "8",
+                "value" : "Extrem frail",
                 "defining_code" : {
                   "_type" : "CODE_PHRASE",
                   "terminology_id" : {

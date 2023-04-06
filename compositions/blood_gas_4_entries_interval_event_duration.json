@@ -110,6 +110,18 @@
             "_type" : "DV_DURATION",
             "value" : "PT4M15S"
           },
+                  "math_function" : {
+          "_type" : "DV_CODED_TEXT",
+          "value" : "total",
+          "defining_code" : {
+            "_type" : "CODE_PHRASE",
+            "terminology_id" : {
+              "_type" : "TERMINOLOGY_ID",
+              "value" : "openehr"
+            },
+            "code_string" : "148"
+          }
+        },
           "time" : {
             "_type" : "DV_DATE_TIME",
             "value" : "2020-09-21T00:00:00+02:00"

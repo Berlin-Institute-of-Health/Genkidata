@@ -9,9 +9,9 @@ import random
 import os
 from getpass import getpass
 
-base_url = "http://localhost:8080/ehrbase/rest/openehr/v1"
-username = "myuser"
-password = "myPassword432"
+# base_url = "http://localhost:8080/ehrbase/rest/openehr/v1"
+# username = "myuser"
+# password = "myPassword432"
 
 header = {'Content-type': 'application/json;', 'Accept': 'application/json;', 'charset': 'utf-8;',
           'Prefer': 'return=representation'}
@@ -21,14 +21,10 @@ ehr_ids = []
 successful_composition_list = {}
 successful_uploads_counter = 0
 upload_counter = 0
-sleep_limit = 3000
-#[['2dbc18b8-4316-4966-9717-32f2b2648592']
 
-
-# global base_url
-# global username
-# global password
-#
+global base_url
+global username
+global password
 
 class Composition:
     def __init__(self, amount, composition_json, ehr_id, filename):
@@ -84,10 +80,7 @@ def enter_login():
 
 def create_ehrs(auth, ehr_count):
     loop = asyncio.get_event_loop()
-    try:
-        loop.run_until_complete(send_ehrs(auth, ehr_count))
-    except:
-        pass
+    loop.run_until_complete(send_ehrs(auth, ehr_count))
 
 
 async def send_compositions(auth, compositions):
@@ -108,24 +101,23 @@ async def send_composition(session, composition):
     await asyncio.gather(*post_tasks)
 
 
+def manage_success(composition, execution_counter):
+    global successful_uploads_counter
+    print("-> Created composition " + composition.filename + " number %d" % execution_counter)
+    successful_composition_list[composition.filename] += 1
+    successful_uploads_counter = successful_uploads_counter + 1
+
+
 async def do_composition_posts(session, composition, execution_counter):
     global upload_counter
-    global sleep_limit
-    global successful_uploads_counter
-
     data = json.dumps(composition.composition_json)
     async with session.post(base_url + "/ehr/" + composition.ehr_id + "/composition", data=data.encode("utf-8"),
                             headers=header) as response:
         data = await response.text()
         upload_counter += 1
-        print( "Compositions upload nr: " + str(upload_counter))
-        if upload_counter == sleep_limit:
-            sleep_limit += sleep_limit
-            time.sleep(10)
+        print("Compositions uploaded: " + str(upload_counter))
         if response.ok:
-            print("-> Created composition " + composition.filename + " number %d" % execution_counter)
-            successful_composition_list[composition.filename] += 1
-            successful_uploads_counter = successful_uploads_counter + 1
+            manage_success(composition, execution_counter)
         else:
             print("ERROR: ", response.status)
             print("Filename: ", composition.filename)
@@ -183,11 +175,11 @@ def load_opts(basic_auth_requests):
 
 
 def main():
-    # enter_login()
-    # status_code = check_connection()
-    # while not status_code:
-    #     enter_login()
-    #     status_code = check_connection()
+    enter_login()
+    status_code = check_connection()
+    while not status_code:
+        enter_login()
+        status_code = check_connection()
     basic_auth_requests = HTTPBasicAuth(username, password)
     auth = aiohttp.BasicAuth(login=username, password=password, encoding='utf-8')
     load_opts(basic_auth_requests)
@@ -204,5 +196,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# ['93019b6a-d493-429a-b7fd-d4b7b0bc4535']

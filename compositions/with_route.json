@@ -105,11 +105,13 @@
       },
       "code_string": "de"
     },
-    "encoding": {
-      "terminology_id": {
-        "value": "Unicode"
+    "encoding" : {
+      "_type" : "CODE_PHRASE",
+      "terminology_id" : {
+        "_type" : "TERMINOLOGY_ID",
+        "value" : "IANA_character-sets"
       },
-      "code_string": "UTF-8"
+      "code_string" : "UTF-8"
     },
     "subject": {
       "_type": "PARTY_SELF"
@@ -299,7 +301,7 @@
                       "_type": "DV_TEXT"
                     },
                     "value": {
-                      "value": "EdgpEVtvmVJaCzZxSYxEEbfWjUGlgRQLHZITDJEqGn,,GFhokLIrTCkSOjFBpXQaKE.TJMDgJCeGa.VTdeIlJCRsbrdBZidjNrVAhYmsa,jsqNXQ,Sfkh,vOYRcSyOlIBPCqjOqVbgBgblJDtyOmEQfzROlynAMTwYQioshcFIfCmJAKFWoFFiJbOCWcGWtX.F.MBqvWGjsKUrfDAPB,eryRZrdkrikIR QH iQwwvYouUXIhlJECKcYtUzJKbe",
+                      "value": "Messbecher",
                       "_type": "DV_TEXT"
                     },
                     "archetype_node_id": "at0145",
@@ -346,7 +348,7 @@
                             "_type": "DV_TEXT"
                           },
                           "value": {
-                            "value": "SUDTgORTIfKGYtedRavhWiwZZDHUzwxFDEOjbTwmCOwjBoAXdAqE,orXctGXgFHgReGOSDeZHjkQvUiJaMaJs,cIzWRtuqDu.rqkQcymLNtaULZKCAfEdgoUQYfvm  FyeoxMm,XIqNzRrzfOkozAMgZjAybz,iSSpIDsryLBgQLYVQtJS qWCTnBzaa,kWWqXDuwMlvuXDxcvVm.dNafEimHdgIUuojLfvQtOnTsBkkgg.A.JOPvGPETKnQjlk",
+                            "value": "morgens",
                             "_type": "DV_TEXT"
                           },
                           "archetype_node_id": "at0026",

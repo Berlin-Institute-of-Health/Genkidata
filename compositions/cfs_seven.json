@@ -183,7 +183,7 @@
               "_type" : "DV_ORDINAL",
               "symbol" : {
                 "_type" : "DV_CODED_TEXT",
-                "value" : "7",
+                "value" : "Ausgeprägt frail",
                 "defining_code" : {
                   "_type" : "CODE_PHRASE",
                   "terminology_id" : {

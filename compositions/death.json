@@ -160,7 +160,7 @@
                 "archetype_node_id": "at0021",
                 "value": {
                   "_type": "DV_TEXT",
-                  "value": "VAwSMqvCAuBu OIlkuEzuuTq.GaGIUWssU,HNZviJqtzeNHUfQRaSPmlwNzAckNQJGK,JjlhtyIVEo yqD yc.uAEKwRxjqCOEQGX.eA,T gw XJDAroIMGnnm thOJCtWrQHQtrSZDhpOCAwcXWSqe GZVlwlaDSZZnPaQxl,ylygpHOTMiJDPTcdzGRQrgcUuZpotq.YxMPAoJMZaiQlVKbMNhVzRDfQQAwgDXIEBqWZQtdpBxGRyLZnDlHbploaufwlIEY VNAUz XBjfNdRpYL,rvepyaOxfsJwQeFMe"
+                  "value": "Home"
                 }
               },
               {
@@ -172,7 +172,7 @@
                 "archetype_node_id": "at0021",
                 "value": {
                   "_type": "DV_TEXT",
-                  "value": "fCzVMfiNmpAeUxig.UVgGsAfBaDvPTDXRaRGYfouzKjXVRNNUqmMOVrLEKzkOmcd.SOXrzNbmzfyBJbz,wgFadwYkUgAEGNAKGPLHHgYoBBOZjGNPgJfNMpyPatNAKxswyrkZy ,GTpCDMA,WBoBUCPWRVVIJqYWJeb,IcFgFXMLKCkvodYG .,,fCKoeWMzNAsgSPB,YeNLfiDhKI,uzPTkYJWsSoFzPsKu.DUIqEEjWRhVrjRUTiyvXTsmigT.iitLltTvUAyFLIwSeB,iSmHcwEGQyzzbjGsi.WMKrEOc"
+                  "value": "Medicine"
                 }
               },
               {
@@ -239,7 +239,7 @@
                     "archetype_node_id": "at0002",
                     "value": {
                       "_type": "DV_TEXT",
-                      "value": "krxaEGiVyoRiZpyUgnMqRHNCJxFinYpP.lXgaVj.DDCUHjTDNGDjQFb.Ds,kwTBZDNhZXOlaHJou,qfVMQwERpreu.WsecruM enskYfwusnyTrTRMdxCUdfPhE,bfiNjtHYjCnPvbxB,YgRDHIDzUFBqJSCL,,dewQsmEsVEYfjj.wNzfdhHwgL aKzaeT QTGYLF.nzL,myIm.GcvQMrtphYMnp lyBThQftpsCTwz,KAecPSXkt.rkDqjbjApuziVyAgYNno,wXWsVWQq.OZ,,xp.rBccRTnKCD NhDtb"
+                      "value": "Alston"
                     }
                   },
                   {
@@ -251,7 +251,7 @@
                     "archetype_node_id": "at0003",
                     "value": {
                       "_type": "DV_TEXT",
-                      "value": "Home"
+                      "value": "Kingston & St Andrew"
                     }
                   }
                 ]
@@ -577,7 +577,7 @@
                         "archetype_node_id": "at0006",
                         "value": {
                           "_type": "DV_TEXT",
-                          "value": "mORzFeWDbsNaRYWdGBxGZFWMwGdn.A,v ndLZ.MkquPZtVirO.cBkJDDaspJwLwNU,LSYmbvkQYDVHOsIAeAYKSx,QnWwyjSzSsGyOhHOuBNFwUulAvCSYGuUi.uZSOKLLJWdmZlimvHjkzoOJrcaV fgrdMrpRWCllAqBgNVgvI OspvU,xvKqmtAUdfEonGNuvAPuKTaObYQeTzHcMjVXoQHLPanNFriLLTs,F ghktCnAoCPibVLxxUv,qQqM.eSi,mkxCjHbtXetMagEEDQGgmoHAUKkEGumGlwhbBQn"
+                          "value": "Alive and well"
                         }
                       }
                     ]
@@ -716,7 +716,7 @@
                         "archetype_node_id": "at0006",
                         "value": {
                           "_type": "DV_TEXT",
-                          "value": "iLqyvDkBlQBBlvGIFXEBGzDDWUHvaPM.SzIxZyQk aidsDihItBnZFlXTcMZknqGtZ,LsVlRLyQDVB,jXutoeeqDwNTJUiTvMBMveYlYSsuG,irZPdvyqbDcEc OcyPaMbQZZQuehjRI,MNXVXmlIPbDfnMezMiUlxGBJPMNlNqyDoZs,FOYNWVpT.lbJRAgXBCwdQV,yDeGf qLmINKhYLttFhlHkLECkBbOHF,WLdONyqdpPvHDJiScjHKHrburBXJGK,gOWLmwBlUGpTNeZObplRilWexNhfrRmon,ukf"
+                          "value": "Alive and well"
                         }
                       }
                     ]
@@ -807,7 +807,7 @@
                         "archetype_node_id": "at0006",
                         "value": {
                           "_type": "DV_TEXT",
-                          "value": "umVgWRVnyxmImyQWnvSYCheSbGtcULPTWtjYDGzxQmtNkDsLJBlvUMVYoGySngApBMdhs.CDufDtRokXCPa.yYGSMjKmQzKQilLOb,QhIvLkx,zzhoFeSQjdpzxBjTVqNYHbSOgaHrRkdxYnyZvOg,PxDyKRLTTvdX.PLqtSBFrvHmiCDDk,kkhzcf,zYTkDVherSeWZqnaHdqeRwFsHtfVBtOd,lqBc ZpLySIMwrcIitdVZGddggzODGNT.InZOxYU c.KNxKdYHjnUtSuhh GUTy nyQOihUFjarCEaoH"
+                          "value": "Alive and well"
                         }
                       }
                     ]
@@ -1038,7 +1038,7 @@
             "archetype_node_id": "at0094",
             "value": {
               "_type": "DV_TEXT",
-              "value": "uoIeuiSHTsIDAnNptg.GPgE.xOwgEeIiKg.SmmD.Iv.,dd,lamGegxFbCwZ.avvHTsSQtJsTmbwURYHyhJev,LmHfq,glKWb,dWlHjn mMCkVxvgs.cKKtFldOqVfLxmYqHcxIdssDEWikAEEcPmORqRrnvffOcv.rmbdezMonJkFFbXaIUQRMuWvvjURJiATLHer zmJbVufBvWIduAayYEL taybb,FtNfRDBULruXHvyKNZntj,kgyCkkObfszmLeDuKIWgpnPrTJNYUHWzGGIRGBHlFKyeGpKQBpiIMv"
+              "value": "Ectopic gestation"
             }
           },
           {
@@ -1101,7 +1101,7 @@
                 "archetype_node_id": "at0163",
                 "value": {
                   "_type": "DV_TEXT",
-                  "value": "egHYRYFjKDjzJpUJnbBp,.ZJfsxGTdBk sSOAv,ZcS,JmBNqx,,gMUvTK,mOtdNLuNOnTtAvXMKcuQqCUnihUT,IrnazbhtglrRPLnzVH.fnzvzMsjiFEJOXplwnpyXFfotOwQdoDjphuLh SvZZtvUtkQFCUWFoMaWLbFIBFfrbr,OBgICb,PitrfOpnYeA.TXtROShdfyEMbvtAENecKTubAIzdbjLdIdeRAKJqixHVKnbeJLosOYhNbgCkSlLlGWiVfSdXILErRzqSzyxxqGnknqupROrJRrkZTAdL,gr"
+                  "value": "Livebirth"
                 }
               },
               {
@@ -1151,7 +1151,7 @@
                     "archetype_node_id": "at0005",
                     "value": {
                       "_type": "DV_TEXT",
-                      "value": "fnHM.pXHdzPAfDxN FAsnnBpnXhlYmREluzMRAMMaiAUQUZiASRNvwxnhlERV.xIUiSVnYQS,rq.tfPLqVH.munKTEC.CcwkKZwRiBGbWULapHZAqvHnIvbfEjGAXGLTvAFQimgDOeaIyij sujCbDwQuYwkwzlDmmjXMPHaTmnMTCtgfRevBitYeetJ.e.HTqktLmStIYthPyozHERMQ.kbrwJFbfMnyv SXrte QPiAuxYJg,eSXEBxgtQr Oxnc zlt,DAXlypZSdReGxIZ kAtvYFRGG,DZcFtllRnnf"
+                      "value": "Assisted breech delivery"
                     }
                   },
                   {
